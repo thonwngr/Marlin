@@ -22,10 +22,17 @@
 #pragma once
 
 //JUST uncomment the option for your machine
+<<<<<<< Updated upstream
 //#define V6_330_TITAN_TMC 1
 //#define V6_330_TITAN_NO_TMC 1
 //  #define V6_330_NO_TITAN_TMC 1
 //#define V6_330_NO_TITAN_NO_TMC 1
+=======
+#define V6_330_TITAN_TMC 1
+// #define V6_330_TITAN_NO_TMC 1
+// #define V6_330_NO_TITAN_TMC 1
+// #define V6_330_NO_TITAN_NO_TMC 1
+>>>>>>> Stashed changes
 // #define V6_400_TITAN_TMC 1
 // #define V6_400_NO_TITAN_TMC 1
 //#define V6_500_TITAN_TMC 1
@@ -35,6 +42,33 @@
 // #define V5_330_NO_TITAN_TMC 1
 // #define V5_330_NO_TITAN_NO_TMC 1
 // #define XY3_V5_310_NO_TITAN_NO_TMC_NO_ABL 1
+<<<<<<< Updated upstream
+=======
+// #define XY3_V5_330_NO_TITAN_TMC_NO_ABL 1
+
+// #define D01_V8_220_TITAN_TMC_NO_ABL 1
+
+// XY2 Thanks to Emmanuel Hayez!
+// #define XY2_V6_255_NO_TITAN_TMC 1
+// #define XY2_V6_255_TITAN_TMC 1
+// #define XY2_V6_255_BMG_TMC 1
+// #define XY2_V6_255M_BMG_TMC 1
+
+// #define XY2_V5_255_NO_TITAN_TMC 1
+// #define XY2_V5_255_TITAN_TMC 1
+// #define XY2_V5_255_TITAN_NO_TMC 1
+// #define XY2_V5_255_NO_TITAN_NO_TMC 1
+// #define XY2_V5_220_NO_TITAN_TMC 1
+// #define XY2_V5_220_TITAN_TMC 1
+// #define XY2_V5_220_NO_TITAN_NO_TMC 1
+// #define XY2_V5_220_TITAN_NO_TMC 1
+
+// #define BTT_SKR_TURBO_330_NO_TITAN_TMC_2209_UART 1
+
+// #define TFT_LVGL_UI
+// #define TFT_CLASSIC_UI
+#define TFT_COLOR_UI
+>>>>>>> Stashed changes
 
 #if V6_330_TITAN_TMC
   #define MOTHERBOARD BOARD_CHITU3D_V6
@@ -1005,7 +1039,7 @@
 #define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
 
 // Force the use of the probe for Z-axis homing
-//#define USE_PROBE_FOR_Z_HOMING
+#define USE_PROBE_FOR_Z_HOMING
 
 /**
  * Z_MIN_PROBE_PIN
@@ -1276,9 +1310,15 @@
 
 // @section homing
 
+<<<<<<< Updated upstream
 //#define NO_MOTION_BEFORE_HOMING // Inhibit movement until all axes have been homed
 
 //#define UNKNOWN_Z_NO_RAISE      // Don't raise Z (lower the bed) if Z is "unknown." For beds that fall when Z is powered off.
+=======
+//#define NO_MOTION_BEFORE_HOMING // Inhibit movement until all axes have been homed. Also enable HOME_AFTER_DEACTIVATE for extra safety.
+//#define HOME_AFTER_DEACTIVATE   // Require rehoming after steppers are deactivated. Also enable NO_MOTION_BEFORE_HOMING for extra safety.
+#define UNKNOWN_Z_NO_RAISE      // Don't raise Z (lower the bed) if Z is "unknown." For beds that fall when Z is powered off.
+>>>>>>> Stashed changes
 
 #define Z_HOMING_HEIGHT  10      // (mm) Minimal Z height before homing (G28) for Z clearance above the bed, clamps, ...
                                   // Be sure to have this much clearance over your Z_MAX_POS to prevent grinding.
